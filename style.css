@@ -291,3 +291,44 @@ header {
     width: auto;
     margin: 0 10px 0 0;
 }
+
+.DonateButton {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+}
+
+.block {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.game-card {
+    display: flex;
+    height: 150px;
+    width: 95%;
+    margin: 10px auto;
+    transition: 0.2s;
+    line-height: 150px;
+}
+
+.game-card h3 {
+    margin: 0 auto;
+}
+
+.game-card:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px var(--poppy);
+    transition: 0.2s;
+}
+
+.game-card img {
+    height: 100%;
+    width: auto;
+    margin: 0 10px 0 0;
+}
