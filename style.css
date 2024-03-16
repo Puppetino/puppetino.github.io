@@ -168,7 +168,7 @@ header {
 
 .container-text {
     width: calc(100% - 2px);
-    height: calc(1022px + 1rem);
+    height: calc(988px + 1rem);
 }
 
 .container-text:hover {
