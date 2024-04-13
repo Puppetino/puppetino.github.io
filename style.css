@@ -1,7 +1,7 @@
 :root{
 
 /* CSS HEX */
---raisin-black: #272727ff;
+--raisin-black: rgb(0, 0, 0);
 --sapphire: #2b50aaff;
 --poppy: #db3a34ff;
 --sunglow: #ffc857ff;
@@ -29,9 +29,9 @@ p {
 }
 
 html {
-    height: calc(100% - 2px);
-    border: 1px var(--poppy) solid;
-    box-shadow: inset 0 0 5px var(--poppy);
+    font-family: Biryani;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -46,7 +46,6 @@ main {
     width: 98%;
     height: calc(100% - (110px + 2rem));
     margin: 0 auto;
-    display: flex;
 }
 
 header {
@@ -146,6 +145,8 @@ header {
     grid-row-start: 1;
     grid-row-end: 4;
     margin: 8px 8px;
+    height: 80px;
+    width: 80px;
 }
 
 .comment h3 {
@@ -159,6 +160,7 @@ header {
 .container {
     width: calc(100% - 2px);
     height: fit-content;
+    text-align: center;
 }
 
 .container:hover {
@@ -169,6 +171,7 @@ header {
 .container-text {
     width: calc(100% - 2px);
     height: calc(988px + 1rem);
+    text-align: center;
 }
 
 .container-text:hover {
@@ -178,18 +181,16 @@ header {
 
 .box {
     width: 100%;
-    height: calc(100dvh - (124px + 2rem));
+    height: calc(100dvh - (130px + 2rem));
     display: grid;
     grid-template-columns: 360px auto;
     grid-template-rows: 102px auto;
     gap: 1rem;
     margin: 0 auto;
-    overflow-y: hidden;
-    overflow: scroll;
-    /* Hide scrollbar for IE, Edge */
-    scrollbar-width: none;
-    /*Hide scrollbar for Firefox */
     overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .box::-webkit-scrollbar {
@@ -300,17 +301,11 @@ header {
 
 .block {
     width: 100%;
-    height: auto;
+    height: fit-content;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-rows: min-content;
     gap: 1rem;
     margin: 0 auto;
-    overflow-y: hidden;
-    overflow: scroll;
-    /* Hide scrollbar for IE, Edge */
-    scrollbar-width: none;
-    /*Hide scrollbar for Firefox */
-    overflow-y: scroll;
 }
 
 .block::-webkit-scrollbar {
@@ -319,7 +314,7 @@ header {
 
 .game-card {
     display: flex;
-    height: 150px;
+    height: 100px;
     width: 95%;
     margin: 10px auto;
     transition: 0.2s;
@@ -338,7 +333,7 @@ header {
 }
 
 .game-card img {
-    height: 100%;
+    height: 100px;
     width: auto;
     margin: 0 10px 0 0;
 }
@@ -386,6 +381,15 @@ header {
     grid-row: 2/3;
 }
 
+.fav {
+    width: 100%;
+    height: 564px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 10px;
+}
+
 @media screen and (max-width: 651px) {
     .box {
         grid-template-columns: auto;
@@ -418,6 +422,22 @@ header {
     .block {
         grid-template-columns: auto;
     }
+
+    .fav {
+        grid-template-columns:repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .O {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .T {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -434,3 +454,4 @@ header {
     }
     
 }
+
