@@ -195,7 +195,7 @@ ul {
 }
 
 .toRight {
-    background-image: linear-gradient(to right, #010409 calc(50% - 1px), white calc(50% + 3px), transparent 0);
+    background-image: linear-gradient(to right, #010409 calc(50% - 1px), #b32020 calc(50% + 3px), transparent 0);
     background-position: right;
 }
 
