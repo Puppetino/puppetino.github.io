@@ -22,7 +22,7 @@ main {
     display: block;
     margin: 0;
     padding: 0;
-    height: 75%;
+    height: calc(100% - 10rem);
     padding: 5rem 0 0 0;
     position: relative;
     z-index: 1;
@@ -116,7 +116,7 @@ ul {
     height: 3rem;
     border-bottom: 1px solid #b32020;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     z-index: 10;
 }
@@ -153,6 +153,7 @@ ul {
 }
 
 .welcome {
+    padding: 0.5rem;
     text-shadow: #b32020 3px 3px 0px;
 }
 
@@ -168,25 +169,23 @@ ul {
 
 .page {
     display: none;
-    position: fixed;
-    top: 15%;
-    left: 10%;
     width: 80%;
-    height: 60%;
+    height: 80%;
     overflow: hidden;
     overflow-y: scroll;
     z-index: 6;
-    padding: 2rem 4rem 2rem 2rem;
+    padding: 2rem;
+    margin: 0 auto;
 }
 
 /* Cover div for the sliding effect */
 #cover {
-    position: fixed;
-    top: 15%;
-    left: 10vw;
-    width: 80vw;
+    position: relative;
     z-index: 5;
-    height: 60%;
+    top: calc(-80% - 4rem);
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
     padding: 2rem 2rem 2rem 2rem;
     display: block;
     background-size: 200% 200%;
@@ -249,4 +248,65 @@ ul {
 
 .nohover {
     pointer-events: none;
+}
+
+.footer {
+    position: relative;
+    display: block;
+    text-align: center;
+    height: 3rem;
+}
+
+@media screen and (max-width: 680px) {
+    html {
+        overflow: hidden;
+    }
+
+    #cover {
+        width: 100%;
+    }
+
+    .welcome {
+        font-size: 10vw;
+        line-height: 10vw;
+    }
+
+    .text {
+        font-size: 4.5vw;
+        line-height: 4.5vw;
+    }
+
+    .h6 {
+        font-size: 2.5vw;
+        line-height: 2.5vw;
+    }
+
+    .h5 {
+        font-size: 3.5vw;
+        line-height: 3.5vw;
+    }
+
+    .h4 {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    .h3 {
+        font-size: 5.5vw;
+        line-height: 5.5vw;
+    }
+
+    .h2 {
+        font-size: 6.5vw;
+        line-height: 6.5vw;
+    }
+
+    .h1 {
+        font-size: 10vw;
+        line-height: 10vw;
+    }
+
+    .project {
+        width: 100%;
+    }
 }
