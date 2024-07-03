@@ -8,6 +8,11 @@
     src: url(./fonts/URWGeometricBold.otf);
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 body {
     background-color: #0f0f0f;
     color: #fff;
@@ -15,7 +20,6 @@ body {
     padding: 0;
     height: 100dvh;
     overflow: hidden;
-    position: relative;
 }
 
 main {
@@ -170,20 +174,19 @@ ul {
 .page {
     display: none;
     width: 80%;
-    height: 80%;
+    height: calc(70% - 88px);
     overflow: hidden;
     overflow-y: scroll;
     z-index: 6;
     padding: 2rem;
-    margin: 0 auto;
+    margin: 5% auto 0 auto;
 }
 
-/* Cover div for the sliding effect */
 #cover {
     position: relative;
     z-index: 5;
-    top: calc(-80% - 4rem);
-    height: 80%;
+    top: calc(-70% - 2rem + 80px);
+    height: calc(70% - 88px);
     width: 80%;
     margin: 0 auto;
     padding: 2rem 2rem 2rem 2rem;
@@ -252,14 +255,32 @@ ul {
 
 .footer {
     position: relative;
+    bottom: 0;
     display: block;
     text-align: center;
     height: 3rem;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 1000px) {
     html {
+        height: 100dvh;
         overflow: hidden;
+    }
+
+    body {
+        height: 100dvh;
+    }
+
+    .main {
+        height: calc(100% - 16rem);
+        margin-bottom: 6rem;
+    }
+
+    .footer {
+        position: relative;
+        bottom: 0;
+        text-align: center;
+        height: 3rem;
     }
 
     #cover {
