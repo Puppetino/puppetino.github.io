@@ -185,8 +185,8 @@ ul {
 #cover {
     position: relative;
     z-index: 5;
-    top: calc(-70% - 2rem + 80px);
-    height: calc(70% - 88px);
+    top: calc(-70% - 2rem );
+    height: calc(70% - 8px);
     width: 80%;
     margin: 0 auto;
     padding: 2rem 2rem 2rem 2rem;
